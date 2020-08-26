@@ -1,0 +1,24 @@
+server:
+npm i graphql express-graphql express nodemon cors concurrently
+
+package.json
+ "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+
+client:
+npm install apollo-boost react-apollo graphql --save
+
+npm install classnames moment react-moment react-router-dom
+
+issue:
+import {graphql, compose} from 'react-apollo';
+Attempted import error: 'compose' is not exported from 'react-apollo'
+
+solution:
+ref uri: https://github.com/apollographql/react-apollo/issues/3330
+npm install lodash.flowright
+import * as compose from 'lodash.flowright';
